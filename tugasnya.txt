@@ -1,0 +1,10 @@
+tantangan dari rais:
+coba buat aplikasi yang ada relationship dan auth. bikin dua entitas, 
+ada perusahaan dan kayawan. satu perusahaan ada banyak karyawan, 
+satu karyawan boleh punya satu perusahaan atau banyak perusahaan. 
+jadi manytomany atau onetomany. kalian buat CRUD dan semua routenya 
+diproteksi pakai middleware buat aksesnya. deadlinenya tanggal 10 juni 2020 jam 23.59. 
+link git post di comment ya
+
+berarti
+perusahaan itu one to many karyawan
