@@ -15,27 +15,32 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-3">
-            <a href="/employee_input"><h4>Click Here to Register New Employee</h4></a>
+            <a href="/employee_link"><h4>Click Here to Register New Employee</h4></a>
             <a href="/company_input"><h4>Click Here to Register New Company</h4></a>
                 <table class="table">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Maritial status</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Perusahaan</th>
+                            <th scope="col">Jabatan</th>
+                            <th scope="col">Umur</th>
+                            <th scope="col">Nomor Telepon</th>  
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($employees as $employee)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th >{{$loop->iteration}}</th>
+                            <td>{{$employee->employee_name}}</td>
+                            <td>{{$employee->company->company_name}}</td>
+                            <td>{{$employee->employee_position}}</td>
+                            <td>{{$employee->employee_age}}</td>
+                            <td>{{$employee->employee_phone_number}}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
-                
             </div>
         </div>
     </div>

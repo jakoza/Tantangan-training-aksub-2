@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'companyController@index');
-
-Route::get('/employee_input', 'employeeController@e_link_input');
+Route::get('/', 'employeeController@index');
 
 Route::get('/welcome','companyController@index');
 
@@ -25,6 +23,8 @@ Route::get('/create/company', 'companyemployeeController@create')->name('create_
 
 Route::post('/company', 'companyController@store')->name('company.store');
 
-Route::post('/employee', 'employeeController@store')->name('employee.store');   
+Route::get('/employee_link','employeeController@link');
+
+Route::post('/employee_input', 'employeeController@store');   
 
 
