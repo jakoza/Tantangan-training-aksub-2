@@ -18,8 +18,9 @@ class CreateEmployeesTable extends Migration
             $table->bigInteger('company_id')->unsigned();   
             $table->foreign('company_id')->references('id')->on('companies');
             $table->string('employee_name');
+            $table->string('employee_postition');
             $table->integer('employee_age');
-            $table->string('employee_mstatus');
+            $table->string('employee_phone_number');
             $table->timestamps();
         });
     }

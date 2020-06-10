@@ -14,17 +14,20 @@
         </div>
     </div>
     <div class="">
-        <form action="" method="POST" class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <form action="{{route('employee.store')}}" method="POST" class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             @csrf
             <label for="employee_name">Name</label><br>
             <input name="employee_name" type="text" placeholder="full name"><br>
+
+            <label for="employee_postition">Employee Position</label><br>
+            <input name="employee_position" type="text" placeholder="employee position"><br>
+
             <label for="employee_age">Age</label><br>
             <input name="employee_age" type="number"><br>
-            <label for="employee_mstatus">Maritial status</label><br>
-            <input type="radio" id="male" name="married">
-            <label for="married">Married</label><br>
-            <input type="radio" id="n_married" name="n_married">
-            <label for="n_married">Not Married</label><br>
+
+            <label for="employee_phone_number">Phone Number</label><br>
+            <input name="employee_phone_number" type="text">
+
             <label for="company_name">Company</label>
             <select name="company_name">
                 <option value="PT_Sinar">PT Sinar</option>
