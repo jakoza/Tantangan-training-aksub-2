@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'employeeController@index');
+Route::get('/', 'companyController@index');
 
-Route::get('/employee_input', 'employeeController@e_link_input');
+Route::get('/employee_input', 'companyController@e_link_input');
 
-Route::get('/welcome','employeeController@index');
+Route::get('/welcome','companyController@index');
 
-Route::get('/company_input', 'employeeController@c_link_input');
+Route::get('/company_input', 'companyController@c_link_input');
+
+Route::get('/create/company', 'companyController@create')->name('create_company');
+
+Route::post('/company', 'companyController@store')->name('company.store');
 
 

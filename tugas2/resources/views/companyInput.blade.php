@@ -15,13 +15,18 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <form>
+            <form action="{{route('company.store')}}" method="POST">
+                @csrf
                 <label for="company_name">Company Name</label><br>
                 <input name="company_name" type="text"><br>
-                <label for="company_age">Company Age</label><br>
-                <input name="company_age" type="number"><br>
+                <label for="company_address">Company Address</label><br>
+                <input name="company_address" type="text"><br>
                 <label for="company_founder">Founder Name</label><br>
                 <input type="text" name="company_founder"><br>
+                <label for="company_age">Company Age</label><br>
+                <input name="company_age" type="number"><br>
+                
+                <button type="submit" class="mt-2">Submit</button>
             </form>
         </div>
         <a href="/welcome">back</a>
