@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <form action="{{route('company.store')}}" method="POST">
+            <form action="{{route('company.store')}}" method="POST" autocomplete="on">
                 @csrf
                 <label for="company_name">Company Name</label><br>
                 <input name="company_name" type="text"><br>
